@@ -533,7 +533,7 @@ class rockBlock(object):
                         
             if(SIGNAL_ATTEMPTS == 0 or signal < 0):
                 
-                print  "NO SIGNAL"
+                print("NO SIGNAL")
                                 
                 if(self.callback != None and callable(self.callback.rockBlockSignalFail) ): 
                     self.callback.rockBlockSignalFail()
