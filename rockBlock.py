@@ -86,7 +86,7 @@ class rockBlock(object):
                 
         command = "AT"
                 
-        self.s.write(command + "\r")
+        self.s.write(command + "\r".encode())
         
         if( self.s.readline().strip() == command ):
             
