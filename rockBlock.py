@@ -429,7 +429,7 @@ class rockBlock(object):
                          
             command = "AT+SBDIX"
             
-            self.s.writeb"command + '\r'")
+            self.s.write(b"command + '\r'")
             
             if( self.s.readline().strip() == command ):
                 
@@ -558,7 +558,7 @@ class rockBlock(object):
     def _processMtMessage(self, mtMsn):
         self._ensureConnectionStatus()
         
-        self.s.write("AT+SBDRB\r".encode())
+        self.s.write(b"AT+SBDRB\r")
         
         response = self.s.readline().strip().replace("AT+SBDRB\r","").strip()
           
