@@ -112,7 +112,7 @@ class rockBlock(object):
 
         command = "AT+CSQ"
         
-        self.s.write(command + "\r".encode())
+        self.s.write(b"command + '\r'")
              
         if( self.s.readline().strip() == command):
         
@@ -333,10 +333,10 @@ class rockBlock(object):
                     checksum = checksum + ord(c)
                 
                                 
-                self.s.write( str(msg).encode() )
+                self.s.write( str(msg) )
                 
-                self.s.write( chr( checksum >> 8 ).encode() )
-                self.s.write( chr( checksum & 0xFF ).encode() )
+                self.s.write( chr( checksum >> 8 ) )
+                self.s.write( chr( checksum & 0xFF )" )
                                        
                 self.s.readline().strip()   #BLANK
                 
